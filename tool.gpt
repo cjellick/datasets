@@ -51,8 +51,8 @@ Param: elements: a JSON array of elements to add.
 Name: Next Element
 Description: Gets the next element in a dataset
 Tools: service
-Param: datasetID: the ID of the dataset
-Param: previousName : the name of the previous element
+Param: datasetID: the ID of the dataset. REQUIRED
+Param: previousName : the name of the previous element. REQUIRED
 
 #!http://service.daemon.gptscript.local/nextElement
 
