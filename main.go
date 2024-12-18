@@ -24,6 +24,7 @@ func main() {
 	mux.HandleFunc("/getAllElements", tools.GetAllElements)
 	mux.HandleFunc("/listElements", tools.ListElements)
 	mux.HandleFunc("/getElement", tools.GetElement)
+	mux.HandleFunc("/nextElement", tools.NextElement)
 	mux.HandleFunc("/listDatasets", tools.ListDatasets)
 	mux.HandleFunc("/outputFilter", tools.OutputFilter)
 	mux.HandleFunc("/", health)

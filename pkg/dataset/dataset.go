@@ -94,6 +94,22 @@ func (d *Dataset) GetElement(name string) (Element, error) {
 	return e, nil
 }
 
+func (d *Dataset) NextElement(previousName string) (Element, error) {
+	e, exists := d.Elements[previousName]
+	if !exists {
+		return Element{}, fmt.Errorf("previous element %s not found", previousName)
+	}
+
+	nextElementIndex := e.Index + 1
+	for _, element := range d.Elements {
+		if element.Index == nextElementIndex {
+			return element, nil
+		}
+	}
+
+	return Element{}, fmt.Errorf("DONE")
+}
+
 func (d *Dataset) AddElement(e Element) error {
 	if _, exists := d.Elements[e.Name]; exists {
 		return fmt.Errorf("element %s already exists", e.Name)
