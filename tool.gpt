@@ -54,6 +54,8 @@ Tools: service
 Param: datasetID: the ID of the dataset
 Param: previousName : the name of the previous element
 
+#!http://service.daemon.gptscript.local/nextElement
+
 ---
 Name: Dataset Description Output Filter
 Description: Appends additional dataset information the output
