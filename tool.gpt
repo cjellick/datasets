@@ -1,3 +1,10 @@
+---
+Name: Datasets
+Description: Tools for interacting with Dataset
+Metadata: bundle: true
+Share Tools: List Datasets, Get Element, Next Element
+
+---
 Name: List Datasets
 Description: Lists all available datasets
 Tools: service
